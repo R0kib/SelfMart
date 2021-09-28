@@ -74,20 +74,35 @@
 .new_item{
     padding: 20px 8px;
 }
-.new_item h1{
+.new_item .new_lunches h1{
     font-size: 30px;
     font-weight: 600;
     letter-spacing:1px;
     color: #272727;
     margin-bottom: 10px;
 }
-.new_item .new_lunches .col .food_img{
-    width: 250px;
-    height: 250px;
+.row .col .card{
+    border: none;
+    padding: 0px;
+}
+.row .col .card img{
+    border-radius: 10px;
 }
 
-.new_item .new_lunches .col .food_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.row .col .card .card-body .card-title {
+    color: #272727;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.row .col .card .card-body .card-text .card-text-p{
+    font-size: 15px;
+}
+.row .col .card .card-body .card-text .card-text-add{
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: rgb(249,152,60);
+    background: radial-gradient(circle, rgba(249,152,60,1) 0%, rgba(233,148,148,1) 100%); 
+    cursor: pointer;
 }
