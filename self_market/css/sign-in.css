@@ -10,10 +10,11 @@ body {
 .signin-form {
   width: 450px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 3);
-  background: #fff;
+  background: rgb(192, 225, 241);
   padding: 20px;
-  margin: 5% auto 0;
+  margin: 10% auto 0;
   text-align: center;
+  border-radius: 15px;
 }
 
 .input-box {
@@ -26,5 +27,5 @@ body {
 }
 
 .signin-form h1 {
-  color: rgb(151, 77, 194);
+  color: rgb(50, 20, 155);
 }
