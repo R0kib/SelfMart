@@ -1,15 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Yaldevi', sans-serif;
 }
 
-.slide {
-    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-}
+
 
 .carousel-inner .carousel-item {
     height: 700px;
@@ -21,7 +20,7 @@
     object-fit: cover;
 }
 
-.catagories {
+.catagories p{
     margin-top: 20px;
     text-transform: uppercase;
     font-size: 25px;
@@ -31,7 +30,9 @@
 }
 
 .sidebar{
-    background-color: #f8f8f8de;
+    /* background-color: #f8f8f8de; */
+    position: sticky;
+    top: 30px;
     height: 100%;
     width: 0;
     padding-top: 20px;
@@ -85,13 +86,25 @@
     border: none;
     padding: 0px;
 }
-.row .col .card img{
-    border-radius: 10px;
+.row .col .card figure{
+    overflow: hidden;
 }
+
+.row .col .card img{
+    cursor: pointer;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+.row .col .card:hover img{
+    transform: scale(1.2);
+}
+
 
 .row .col .card .card-body .card-title {
     color: #272727;
     font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -99,7 +112,7 @@
     font-size: 15px;
 }
 .row .col .card .card-body .card-text .card-text-add{
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px 10px;
     border-radius: 20px;
     background: rgb(249,152,60);
