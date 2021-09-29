@@ -66,7 +66,7 @@
     width: 40px;
     height: 3px;
     padding: 0;
-    background-color: orangered;
+    background-color: #e85826;
     position: absolute;
     left: 0;
     bottom: 10px;
@@ -76,11 +76,17 @@
     padding: 20px 8px;
 }
 .new_item .new_lunches h1{
+    width: fit-content;
     font-size: 30px;
     font-weight: 600;
     letter-spacing:1px;
     color: #272727;
     margin-bottom: 10px;
+}
+.new_lunches_title {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom: 3px solid #e85826;
 }
 .row .col .card{
     border: none;
@@ -119,3 +125,135 @@
     background: radial-gradient(circle, rgba(249,152,60,1) 0%, rgba(233,148,148,1) 100%); 
     cursor: pointer;
 }
+
+.footer {
+    background-color: #202126;
+    padding: 7rem 0;
+    color: #888;
+    font-size: 16px; 
+    z-index: 999;
+    width: 100% !important;
+    height: auto !important;
+}
+.footer, .footer h3 {
+    font-family: "Poppins", sans-serif;
+}
+.footer h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 30px; 
+}
+.footer p {
+      font-family: "Source Serif Pro", serif; 
+}
+.footer .row.gallery {
+      margin-right: -5px;
+      margin-left: -5px; 
+}
+.footer .row.gallery > [class^="col-"],
+.footer .row.gallery > [class*=" col-"] {
+        padding-right: 5px;
+        padding-left: 5px; 
+}
+.footer .gallery a {
+      display: block;
+      margin-bottom: 10px;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease; 
+}
+.footer .gallery a:hover {
+     opacity: .5; 
+}
+.footer .quick-info li {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 10px; 
+}
+.footer .quick-info li a {
+        color: #fff; 
+}
+.footer .quick-info li .icon {
+        font-size: 20px;
+        color: #f88020; }
+.footer .subscribe {
+      position: relative; }
+.footer .subscribe .form-control {
+        background-color: #292b31;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 30px;
+        height: 55px;
+        padding-left: 30px;
+        padding-right: 130px;
+        border: none;
+        color: #fff; }
+.footer .subscribe .form-control::-webkit-input-placeholder {
+          color: #ccc;
+          font-size: 14px; }
+.footer .subscribe .form-control::-moz-placeholder {
+          color: #ccc;
+          font-size: 14px; }
+.footer .subscribe .form-control:-ms-input-placeholder {
+          color: #ccc;
+          font-size: 14px; }
+.footer .subscribe .form-control:-moz-placeholder {
+          color: #ccc;
+          font-size: 14px; }
+.footer.subscribe .btn-submit {
+    background: #f88020;
+    height: 47px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
+.footer .tweets li {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-style: italic;
+    font-family: "Source Serif Pro", serif; 
+}
+.footer .tweets li span {
+    color: #fff; 
+}
+.footer .footer-menu-wrap {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem !important;
+    margin-top: 7rem; 
+}
+.footer .footer-menu {
+    margin-bottom: 0; 
+}
+.footer .footer-menu li {
+    display: inline-block; 
+}
+ @media (max-width: 767.98px) {
+    .footer .footer-menu li {
+        display: block; 
+    } 
+}
+    .footer .footer-menu li a {
+        padding: 10px;
+        display: inline-block;
+        color: #fff; 
+    }
+ @media (max-width: 767.98px) {
+    .footer .footer-menu li a {
+        display: block;
+        padding-left: 0px; 
+    } 
+}
+.footer .footer-menu li:first-child a {
+    padding-left: 0; 
+}
+.footer .site-logo {
+    color: #fff;
+    font-size: 20px; 
+}
+  
