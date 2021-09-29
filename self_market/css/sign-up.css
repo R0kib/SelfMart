@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url(/images/background_for_SignIn_&_SignUp\ .jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.signup-form {
+  width: 450px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 3);
+  background: #fff;
+  padding: 20px;
+  margin: 5% auto 0;
+  text-align: center;
+}
+
+.input-box {
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid;
+  outline: none;
+}
+
+.signup-form h1 {
+  color: rgb(151, 77, 194);
+}
