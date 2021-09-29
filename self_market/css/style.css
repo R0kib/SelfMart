@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-    font-family: 'Yaldevi', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -25,7 +25,6 @@
     text-transform: uppercase;
     font-size: 25px;
     font-weight: 600;
-    position: relative;
     border-bottom: 1px solid #272727;
 }
 
@@ -38,7 +37,6 @@
     padding-top: 20px;
     left: 0;
     z-index: 1;
-    overflow: hidden;
     border-radius: 5px;
 }
 
@@ -130,55 +128,45 @@
     background-color: #202126;
     padding: 7rem 0;
     color: #888;
-    font-size: 16px; 
-    z-index: 999;
-    width: 100% !important;
-    height: auto !important;
-}
-.footer, .footer h3 {
-    font-family: "Poppins", sans-serif;
-}
-.footer h3 {
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 30px; 
-}
-.footer p {
-      font-family: "Source Serif Pro", serif; 
-}
-.footer .row.gallery {
+    font-size: 16px; }
+    .footer, .footer h3 {
+      font-family: "Poppins", sans-serif; }
+    .footer h3 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 30px; }
+    .footer p {
+      font-family: "Source Serif Pro", serif; }
+    .footer .row.gallery {
       margin-right: -5px;
-      margin-left: -5px; 
-}
-.footer .row.gallery > [class^="col-"],
-.footer .row.gallery > [class*=" col-"] {
+      margin-left: -5px; }
+      .footer .row.gallery > [class^="col-"],
+      .footer .row.gallery > [class*=" col-"] {
         padding-right: 5px;
-        padding-left: 5px; 
-}
-.footer .gallery a {
+        padding-left: 5px; }
+    .footer .gallery a {
       display: block;
       margin-bottom: 10px;
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
-      transition: .3s all ease; 
-}
-.footer .gallery a:hover {
-     opacity: .5; 
-}
-.footer .quick-info li {
+      transition: .3s all ease; }
+      .footer .gallery a:hover {
+        opacity: .5; }
+    .footer .quick-info li {
       color: #fff;
       font-size: 16px;
-      margin-bottom: 10px; 
-}
-.footer .quick-info li a {
-        color: #fff; 
-}
-.footer .quick-info li .icon {
+      margin-bottom: 10px; }
+      .footer .quick-info li a {
+        color: #fff;
+    }
+      .footer .quick-info li .icon {
         font-size: 20px;
-        color: #f88020; }
-.footer .subscribe {
-      position: relative; }
-.footer .subscribe .form-control {
+        color: #f88020;
+        margin-right: 5px; }
+    .footer .subscribe {
+      position: relative;
+     }
+      .footer .subscribe .form-control {
         background-color: #292b31;
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -187,73 +175,77 @@
         padding-left: 30px;
         padding-right: 130px;
         border: none;
-        color: #fff; }
-.footer .subscribe .form-control::-webkit-input-placeholder {
-          color: #ccc;
-          font-size: 14px; }
-.footer .subscribe .form-control::-moz-placeholder {
-          color: #ccc;
-          font-size: 14px; }
-.footer .subscribe .form-control:-ms-input-placeholder {
-          color: #ccc;
-          font-size: 14px; }
-.footer .subscribe .form-control:-moz-placeholder {
-          color: #ccc;
-          font-size: 14px; }
-.footer.subscribe .btn-submit {
-    background: #f88020;
-    height: 47px;
-    border-radius: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    color: #fff;
-    font-weight: bold;
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); }
-.footer .tweets li {
-    margin-bottom: 20px;
-    font-size: 15px;
-    font-style: italic;
-    font-family: "Source Serif Pro", serif; 
-}
-.footer .tweets li span {
-    color: #fff; 
-}
-.footer .footer-menu-wrap {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem !important;
-    margin-top: 7rem; 
-}
-.footer .footer-menu {
-    margin-bottom: 0; 
-}
-.footer .footer-menu li {
-    display: inline-block; 
-}
- @media (max-width: 767.98px) {
-    .footer .footer-menu li {
-        display: block; 
-    } 
-}
-    .footer .footer-menu li a {
-        padding: 10px;
-        display: inline-block;
         color: #fff; 
     }
- @media (max-width: 767.98px) {
-    .footer .footer-menu li a {
-        display: block;
-        padding-left: 0px; 
-    } 
-}
-.footer .footer-menu li:first-child a {
-    padding-left: 0; 
-}
-.footer .site-logo {
-    color: #fff;
-    font-size: 20px; 
-}
+        .footer .subscribe .form-control::-webkit-input-placeholder {
+          color: #ccc;
+          font-size: 14px; 
+        }
+        .footer .subscribe .form-control::-moz-placeholder {
+          color: #ccc;
+          font-size: 14px; 
+        }
+        .footer .subscribe .form-control:-ms-input-placeholder {
+          color: #ccc;
+          font-size: 14px; 
+        }
+        .footer .subscribe .form-control:-moz-placeholder {
+          color: #ccc;
+          font-size: 14px; 
+        }
+      .footer .subscribe .btn-submit {
+        background: #f88020;
+        height: 47px;
+        border-radius: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: #fff;
+        font-weight: bold;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2); 
+    }
+    .footer .tweets li {
+      margin-bottom: 20px;
+      font-size: 15px;
+      font-style: italic;
+      font-family: "Source Serif Pro", serif; 
+    }
+      .footer .tweets li span {
+        color: #fff; 
+    }
+    .footer .footer-menu-wrap {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 2rem !important;
+      margin-top: 7rem; 
+    }
+    .footer .footer-menu {
+      margin-bottom: 0; 
+    }
+      .footer .footer-menu li {
+        display: inline-block; 
+    }
+        @media (max-width: 767.98px) {
+          .footer .footer-menu li {
+            display: block; 
+        } }
+        .footer .footer-menu li a {
+          padding: 10px;
+          display: inline-block;
+          color: #fff; 
+        }
+          @media (max-width: 767.98px) {
+            .footer .footer-menu li a {
+              display: block;
+              padding-left: 0px; 
+            } }
+        .footer .footer-menu li:first-child a {
+          padding-left: 0; 
+        }
+    .footer .site-logo {
+      color: #fff;
+      font-size: 20px; 
+    }
   
