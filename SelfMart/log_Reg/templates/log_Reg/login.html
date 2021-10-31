@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block cssblock %}
+    <link rel="stylesheet" href="{% static 'log_Reg/css/log_reg.css' %}">
+{% endblock cssblock %}
+
+{% block content %}
+   <div class="signin-form">
+        <h1>log In</h1>
+        <form>
+            <input type="text" class="input-box" placeholder="Username">
+            <input type="password" class="input-box" placeholder="Password">
+            <button type="submit" class="btn btn-success">Log In</button>
+            <hr>
+            <p class="or">OR</p>
+            <p>Don't have an account? <a type="button" class="text-danger" href="/log_reg/signup">Sign Up</a></p>
+            
+        </form>
+    </div>        
+{% endblock content %}

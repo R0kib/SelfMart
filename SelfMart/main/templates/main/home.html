@@ -1,0 +1,70 @@
+
+{% extends "main/base.html" %} 
+{% load static %}
+{% block content %}
+ <header> 
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'main/images/coffee.jpg' %}" class="d-block w-100 h-30" alt="Coffee" />
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'main/images/pasta.jpg' %}" class="d-block w-100 h-30" alt="Coffee" />
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'main/images/pizza.jpg' %}" class="d-block w-100 h-30" alt="Coffee" />
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'main/images/salad.jpg' %}" class="d-block w-100 h-30" alt="Coffee" />
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'main/images/soup.jpg' %}" class="d-block w-100 h-30" alt="Coffee" />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+   </header>
+   
+   <section class="item_menu" id="item_menu">
+    <div class="container">
+        <div class="catagories">
+            <p>Catagories</p>
+        </div>
+        <div class="row">
+            <div class="col-4 sidebar">
+                <a class=" nav-link " href="#Breakfast Platter">Breakfast Platter</a>
+                <a class=" nav-link " href="#New Lunches">New Lunches</a>
+                <a class=" nav-link " href="#Sandwich and more">Sandwich and more</a>
+                <a class=" nav-link " href="#Biriyani">Biriyani</a>
+                <a class=" nav-link " href="#Fresh Dessert">Fresh Dessert</a>
+                <a class=" nav-link " href="#Beverage">Beverage</a>
+            </div>
+            <div class="col-8 new_item">
+                {% include 'items/item.html' %}
+            </div>
+        </div> 
+    </div>
+    </section>
+
+    <footer class="footer pb-0">
+        {% include "main/footer.html" %}
+    </footer>
+   
+
+{% endblock content %}
+

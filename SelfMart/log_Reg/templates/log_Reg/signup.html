@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block cssblock %}
+    <link rel="stylesheet" href="{% static 'log_Reg/css/log_reg.css' %}">
+{% endblock cssblock %}
+
+
+{% block content %}
+     <div class="signup-form">
+        <h1>Sign Up</h1>
+        <form>
+            <input type="text" class="input-box" placeholder="Username">
+            <input type="email" class="input-box" placeholder="Email">
+            <input type="number" class="input-box" placeholder="Contact No">
+            <input type="password" class="input-box" placeholder="Password">
+            <input type="password" class="input-box" placeholder="Retype Password">
+            <p class="mt-2"><span><input type="checkbox"></span> I agree to the terms and condition </p>
+            <button type="button" class="btn btn-success">Sign Up</button>
+            <hr>
+            <p class="or">OR</p>
+            <p>Already have an account? <a type="button" class="text-danger" href="/log_reg/login">logIn</a></p>
+            
+        </form>
+    </div>
+{% endblock content %}

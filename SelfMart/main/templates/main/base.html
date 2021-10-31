@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}SeflMart{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'main/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap_min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    {% block cssblock %}
+     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    {% endblock cssblock %}
+    
+</head>
+<body>
+    {% include 'main/nav.html' %}
+    
+    {% block content %}
+        
+    {% endblock content %}
+
+
+  
+    <script src="{% static 'main/js/bootstrap_min.js' %} "></script>
+    <script src="{% static 'main/js/jquery_min.js' %} "></script>
+    <script src="{% static 'main/js/popper_min.js' %} "></script>
+    <script src="{% static 'main/js/all.min.js'%} "></script>
+</body>
+</html>
