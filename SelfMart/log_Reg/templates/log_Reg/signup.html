@@ -8,14 +8,15 @@
 {% block content %}
      <div class="signup-form">
         <h1>Sign Up</h1>
-        <form>
-            <input type="text" class="input-box" placeholder="Username">
-            <input type="email" class="input-box" placeholder="Email">
-            <input type="number" class="input-box" placeholder="Contact No">
-            <input type="password" class="input-box" placeholder="Password">
-            <input type="password" class="input-box" placeholder="Retype Password">
+        <form action="" method="post">
+        {% csrf_token %}
+            <input type="text" name="username" class="input-box" placeholder="Username">
+            <input type="email" name="email" class="input-box" placeholder="Email">
+            <input type="number" name="number" class="input-box" placeholder="Contact No">
+            <input type="password" name="password1" class="input-box" placeholder="Password">
+            <input type="password" name="password2" class="input-box" placeholder="Confirm Password">
             <p class="mt-2"><span><input type="checkbox"></span> I agree to the terms and condition </p>
-            <button type="button" class="btn btn-success">Sign Up</button>
+            <button type="submit" class="btn btn-success">Sign Up</button>
             <hr>
             <p class="or">OR</p>
             <p>Already have an account? <a type="button" class="text-danger" href="/log_reg/login">logIn</a></p>
