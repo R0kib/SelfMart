@@ -45,3 +45,7 @@ def signup(request):
 
 def logout(request):
     pass
+
+
+def account(request):
+    return render(request, 'log_Reg/myaccount.html')
