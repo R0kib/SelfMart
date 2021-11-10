@@ -6,3 +6,6 @@ def home(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+def product_detail(request):
+    return render(request, 'main/product-detail.html')

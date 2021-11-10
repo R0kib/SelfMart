@@ -1,8 +1,8 @@
 
 {% extends "main/base.html" %} 
 {% load static %}
-{% block content %}
- <header> 
+{% block main-content %}
+ <section class="slider"> 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -38,7 +38,7 @@
     </button>
     </div>
 
-   </header>
+   </section>
    
    <section class="item_menu" id="item_menu">
     <div class="container">
@@ -55,16 +55,14 @@
                 <a class=" nav-link " href="#Beverage">Beverage</a>
             </div>
             <div class="col-8 new_item">
-                {% include 'items/item.html' %}
+                {% include 'main/item.html' %}
             </div>
         </div> 
     </div>
     </section>
 
-    <footer class="footer pb-0">
-        {% include "main/footer.html" %}
-    </footer>
-   
-
-{% endblock content %}
+{% endblock main-content %}
+  {% block main-footer %}
+        {% include 'main/footer.html' %}
+    {% endblock main-footer %}
 

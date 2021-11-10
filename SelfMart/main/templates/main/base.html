@@ -11,21 +11,38 @@
     
     <link rel="stylesheet" href="{% static 'main/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/bootstrap_min.css' %}">
-    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    
     {% block cssblock %}
      <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
     {% endblock cssblock %}
+
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     
 </head>
 <body>
     {% include 'main/nav.html' %}
     
-    {% block content %}
+    {% block main-content %}
         
-    {% endblock content %}
+    {% endblock main-content %}
 
+    
+    <footer class="footer mb-o pb-0">
+      <div class="bg-black">
+        {% block main-footer %}
 
-  
+        {% endblock main-footer %}
+      </div>  
+
+       <div class="bg-black">
+           <div class="container-fluid bg-black d-md-flex align-items-center justify-content-center text-center">
+            <small class="text-white">Copyright &copy; 2021 || Developed By Lollypop Troops </small>
+           </div>
+        </div>  
+     </footer>
+   
+   
+   
     <script src="{% static 'main/js/bootstrap_min.js' %} "></script>
     <script src="{% static 'main/js/jquery_min.js' %} "></script>
     <script src="{% static 'main/js/popper_min.js' %} "></script>

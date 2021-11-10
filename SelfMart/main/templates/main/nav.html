@@ -1,41 +1,135 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container container-fluid">
-            <a class="navbar-brand" href="/">SelfMart</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<header class="d-flex flex-column">
+  {% comment %}
+  <div class="header_top">
+    <!--header_top-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="contactinfo">
+            <ul class="nav nav-pills">
+              <li>
+                <a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-envelope"></i> info@domain.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="social-icons pull-right">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-google-plus"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endcomment %}
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container container-fluid">
+      <a class="navbar-brand" href="/">SelfMart</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto flex-nowrap">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto flex-nowrap">
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
               <i class="fas fa-search"></i>
             </button>
-                    </form>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <i class="far fa-user"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/log_reg/logout" >LogOut</a></li>
-                            <li><a class="dropdown-item" href="/log_reg/account" >My Account</a></li>
-
-                            <li><a class="dropdown-item" href="/log_reg/login">Log In</a></li>
-                            <li><a class="dropdown-item" href="/log_reg/signup">Sign Up</a></li>
-                        </ul>
-                    </li>
-                    {% comment %} <i class="far fa-user"></i> {% endcomment %}
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-                  </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+          </form>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item dropdown mx-2">
+            <a
+              class="nav-link dropdown-toggle text-white"
+              href="#"
+              id="profileDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Erfan
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+              <li>
+                <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Orders</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="{% url 'change_pass' %}"
+                  >Change Password</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="far fa-user"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/log_reg/login">Log In</a></li>
+              <li>
+                <a class="dropdown-item" href="/log_reg/signup">Sign Up</a>
+              </li>
+            </ul>
+          </li>
+          {% comment %}
+          <i class="far fa-user"></i>
+          {% endcomment %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'cart-item' %}"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

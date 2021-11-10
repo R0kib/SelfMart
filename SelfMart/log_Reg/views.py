@@ -4,13 +4,15 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login
 
 # Create your views here.
+
+
 def login_page(request):
 
     if request.method == 'POST':
         username = request.POST['username']
         password1 = request.POST['password1']
 
-        user = authenticate(username = username, password = password1)
+        user = authenticate(username=username, password=password1)
 
         if user is not None:
             login(request, user)
@@ -21,6 +23,7 @@ def login_page(request):
             return redirect('login')
 
     return render(request, 'log_Reg/login.html')
+
 
 def signup(request):
 
@@ -36,7 +39,8 @@ def signup(request):
 
         myuser.save()
 
-        messages.success(request, "Your Account has been successfully created.")
+        messages.success(
+            request, "Your Account has been successfully created.")
 
         return redirect('login')
 
@@ -47,5 +51,13 @@ def logout(request):
     pass
 
 
-def account(request):
-    return render(request, 'log_Reg/myaccount.html')
+def profile(request):
+    return render(request, 'log_Reg/profile.html')
+
+
+def change_pass(request):
+    return render(request, 'log_Reg/changepassword.html')
+
+
+def address(request):
+    return render(request, 'log_Reg/address.html')
