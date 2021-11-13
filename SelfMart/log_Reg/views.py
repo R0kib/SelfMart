@@ -61,3 +61,4 @@ def change_pass(request):
 
 def address(request):
     return render(request, 'log_Reg/address.html')
+

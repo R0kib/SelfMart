@@ -11,7 +11,11 @@
         {% csrf_token  %}
             <input type="text" name="username" class="input-box" placeholder="Username">
             <input type="password" name="password1" class="input-box" placeholder="Password">
-            <button type="submit" class="btn btn-success">Log In</button>
+            
+             <a class="mt-3" href="#">Forget Password?</a> <br>
+            <button type="submit" class="btn btn-success mt-3">Log In</button>
+            
+           
             <hr>
             <p class="or">OR</p>
             <p>Don't have an account? <a type="button" class="text-danger" href="/log_reg/signup">Sign Up</a></p>

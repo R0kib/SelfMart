@@ -7,6 +7,4 @@ urlpatterns = [
     path('profile/', views.profile, name="profile"),
     path('address/', views.address, name="address"),
     path('change_pass/', views.change_pass, name="change_pass"),
-
-
 ]
