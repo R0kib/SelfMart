@@ -30,13 +30,23 @@ class Catagories(models.Model):
     def __str__(self):
         return str(self.id)
 
+CATAGORY_CHOICES =(
+    ('BF', 'BreakFast'),
+    ('L', 'Lunches'),
+    ('SM', 'Sandwich and more'),
+    ('BIR', 'Biriyani'),
+    ('FD', 'Fresh Dessert'),
+    ('BG', 'Beverage'),
+)
+
 class Product(models.Model):
     title = models.CharField(max_length=200)
     selling_price = models.FloatField()
     discount_price = models.FloatField()
     discription = models.TextField()
     brand = models.CharField(max_length=100)
-    catagory = models.ForeignKey(Catagories, on_delete = models.CASCADE)
+    #catagory = models.ForeignKey(Catagories, on_delete = models.CASCADE)
+    catagory = models.CharField(choices= CATAGORY_CHOICES, max_length = 4)
     product_image = models.ImageField(upload_to= 'productImg')
 
     def __str__(self):

@@ -4,543 +4,150 @@
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Breakfast Platter</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
+                    {% for break_fast in BreakFast %}
                     <div class="col">
                     <a href="/product_detail" class="btn">
                       <div class="card">
                         <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="">
+                          <img src="{{ break_fast.product_image.url }}" class="card-img-top" alt="">
                         </figure>
                         <div class="card-body">
-                          <small> <p class="card-title ">Chicken Sausage Loaded Fries</p> </small> 
+                          <small> <p class="card-title ">{{break_fast.title}} </p> </small> 
                           <div class="card-text d-flex justify-content-between"> 
-                            <p class="card-text-p">৳ 220 </p>
+                            <p class="card-text-p">৳ {{break_fast.discount_price}} </p>
+                             <p class="card-text-add">ADD</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                    
+                    </div>
+                    {% endfor %}
+                  </div>
+              </section> 
+
+              <section id="New Lunches">
+              <div class="new_lunches">
+                <h1 class="new_lunches_title">Lunches</h1>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                     {% for lunch in Lunches %}
+                    <div class="col">
+                    <a href="/product_detail" class="btn">
+                      <div class="card">
+                        <figure>
+                          <img src="{{ lunch.product_image.url }}" class="card-img-top" alt="">
+                        </figure>
+                        <div class="card-body">
+                          <small> <p class="card-title ">{{lunch.title}} </p> </small> 
+                          <div class="card-text d-flex justify-content-between"> 
+                            <p class="card-text-p">৳ {{lunch.discount_price}} </p>
                              <p class="card-text-add">ADD</p>
                           </div>
                         </div>
                       </div>
                     </a>
                     </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                            <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Buffalo Chicken Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                       <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                         <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Sambal Peanut Chicken Noodles</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                          <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                         </figure>
-                          <div class="card-body">
-                            <p class="card-title">Sichuan Fried Chicken Bowl</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card">
-                           <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                          </figure>
-                          <div class="card-body">
-                            <p class="card-title">Chicken Sausage Loaded Fries</p>
-                            <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                            </div>
-                          </div>
-                        </div>
-                  </div>
+                    {% endfor %}
+              
                 </div>
-              </section> 
-              <section id="New Lunches">
-              <div class="new_lunches">
-                <h1 class="new_lunches_title">New Lunches</h1>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> 
-                            <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Buffalo Chicken Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> 
-                            <p class="card-text-p">৳120 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                       <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳200 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                         <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Sambal Peanut Chicken Noodles</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                          <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                         </figure>
-                          <div class="card-body">
-                            <p class="card-title">Sichuan Fried Chicken Bowl</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳150 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                  <div class="card">
-                      <figure>
-                      <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                      </figure>
-                    <div class="card-body">
-                        <p class="card-title">Chicken Sausage Loaded Fries</p>
-                        <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳120 </p>
-                          <p class="card-text-add">ADD</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="card">
-                        <figure>
-                      <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                      </figure>
-                      <div class="card-body">
-                        <p class="card-title">Fried Chicken Kimchi Rice Bowl</p>
-                        <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                          <p class="card-text-add">ADD</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card">
-                        <figure>
-                      <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                      </figure>
-                      <div class="card-body">
-                        <p class="card-title">Fried Chicken Kimchi Rice Bowl</p>
-                        <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                          <p class="card-text-add">ADD</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              </div>
               </section>
               <section id="Sandwich and more">
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Sandwich and more</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
+                       {% for SM in Sandwich %}
                     <div class="col">
+                    <a href="/product_detail" class="btn">
                       <div class="card">
                         <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="">
+                          <img src="{{ SM.product_image.url }}" class="card-img-top" alt="">
                         </figure>
                         <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
+                          <small> <p class="card-title ">{{SM.title}} </p> </small> 
                           <div class="card-text d-flex justify-content-between"> 
-                            <p class="card-text-p">৳220 </p>
+                            <p class="card-text-p">৳ {{SM.discount_price}} </p>
                              <p class="card-text-add">ADD</p>
                           </div>
                         </div>
                       </div>
+                    </a>
                     </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Buffalo Chicken Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                       <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                         <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Sambal Peanut Chicken Noodles</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                          <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                         </figure>
-                          <div class="card-body">
-                            <p class="card-title">Sichuan Fried Chicken Bowl</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                             <p class="card-text-add">ADD</p>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card">
-                           <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                          </figure>
-                          <div class="card-body">
-                            <p class="card-title">Chicken Sausage Loaded Fries</p>
-                            <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                            </div>
-                          </div>
-                        </div>
+                    {% endfor %}
                   </div>
-                </div>
-              </section>
-            <section id="Biriyani">
+            </section>
+
+              <section id="Biriyani">
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Biriyani</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
+                       {% for birny in Biriyani %}
                     <div class="col">
+                    <a href="/product_detail" class="btn">
                       <div class="card">
                         <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="">
+                          <img src="{{ birny.product_image.url }}" class="card-img-top" alt="">
                         </figure>
                         <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
+                          <small> <p class="card-title ">{{birny.title}} </p> </small> 
                           <div class="card-text d-flex justify-content-between"> 
-                            <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
+                            <p class="card-text-p">৳ {{birny.discount_price}} </p>
+                             <p class="card-text-add">ADD</p>
                           </div>
                         </div>
                       </div>
+                    </a>
                     </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Buffalo Chicken Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                          <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Sambal Peanut Chicken Noodles</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                          <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                          </figure>
-                          <div class="card-body">
-                            <p class="card-title">Sichuan Fried Chicken Bowl</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card">
-                            <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                          </figure>
-                          <div class="card-body">
-                            <p class="card-title">Chicken Sausage Loaded Fries</p>
-                            <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                            </div>
-                          </div>
-                        </div>
+                    {% endfor %}
                   </div>
-                </div>
             </section>
+
             <section id="Fresh Dessert">
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Fresh Dessert</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
+                       {% for fd in FreshDessert %}
                     <div class="col">
+                    <a href="/product_detail" class="btn">
                       <div class="card">
                         <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="">
+                          <img src="{{ fd.product_image.url }}" class="card-img-top" alt="">
                         </figure>
                         <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
+                          <small> <p class="card-title ">{{fd.title}} </p> </small> 
                           <div class="card-text d-flex justify-content-between"> 
-                            <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
+                            <p class="card-text-p">৳ {{fd.discount_price}} </p>
+                             <p class="card-text-add">ADD</p>
                           </div>
                         </div>
                       </div>
+                    </a>
                     </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Buffalo Chicken Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                          <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Sambal Peanut Chicken Noodles</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                          <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                          </figure>
-                          <div class="card-body">
-                            <p class="card-title">Sichuan Fried Chicken Bowl</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card">
-                            <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                          </figure>
-                          <div class="card-body">
-                            <p class="card-title">Chicken Sausage Loaded Fries</p>
-                            <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                            </div>
-                          </div>
-                        </div>
+                    {% endfor %}
                   </div>
-                </div>
             </section>
             <section id="Beverage">
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Beverage</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
+                    {% for bev in Beverage %}
                     <div class="col">
+                    <a href="/product_detail" class="btn">
                       <div class="card">
                         <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="">
+                          <img src="{{ bev.product_image.url }}" class="card-img-top" alt="">
                         </figure>
                         <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
+                          <small> <p class="card-title ">{{bev.title}} </p> </small> 
                           <div class="card-text d-flex justify-content-between"> 
-                            <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
+                            <p class="card-text-p">৳ {{bev.discount_price}} </p>
+                             <p class="card-text-add">ADD</p>
                           </div>
                         </div>
                       </div>
+                    </a>
                     </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Buffalo Chicken Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                        <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Chicken Sausage Loaded Fries</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card">
-                          <figure>
-                        <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                        </figure>
-                        <div class="card-body">
-                          <p class="card-title">Sambal Peanut Chicken Noodles</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                          <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                          </figure>
-                          <div class="card-body">
-                            <p class="card-title">Sichuan Fried Chicken Bowl</p>
-                          <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card">
-                            <figure>
-                          <img src="{% static 'main/images/food1.jpg' %}" class="card-img-top" alt="...">
-                          </figure>
-                          <div class="card-body">
-                            <p class="card-title">Chicken Sausage Loaded Fries</p>
-                            <div class="card-text d-flex justify-content-between"> <p class="card-text-p">৳220 </p>
-                              <p class="card-text-add">ADD</p>
-                            </div>
-                          </div>
-                        </div>
+                    {% endfor %}          
                   </div>
-                </div>
-                </div>
             </section>
     </div>
   </section>
