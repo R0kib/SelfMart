@@ -6,7 +6,7 @@
                   <div class="row row-cols-1 row-cols-md-3 g-4">
                     {% for break_fast in BreakFast %}
                     <div class="col">
-                    <a href="/product_detail" class="btn">
+                    <a href="{% url 'product_detail' break_fast.id %}" class="btn">
                       <div class="card">
                         <figure>
                           <img src="{{ break_fast.product_image.url }}" class="card-img-top" alt="">
@@ -14,7 +14,7 @@
                         <div class="card-body">
                           <small> <p class="card-title ">{{break_fast.title}} </p> </small> 
                           <div class="card-text d-flex justify-content-between"> 
-                            <p class="card-text-p">৳ {{break_fast.discount_price}} </p>
+                            <p class="card-text-p">৳ {{break_fast.discount_price}}</p>
                              <p class="card-text-add">ADD</p>
                           </div>
                         </div>
@@ -32,7 +32,7 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                      {% for lunch in Lunches %}
                     <div class="col">
-                    <a href="/product_detail" class="btn">
+                    <a href="{% url 'product_detail' lunch.id %}" class="btn">
                       <div class="card">
                         <figure>
                           <img src="{{ lunch.product_image.url }}" class="card-img-top" alt="">
@@ -57,7 +57,7 @@
                   <div class="row row-cols-1 row-cols-md-3 g-4">
                        {% for SM in Sandwich %}
                     <div class="col">
-                    <a href="/product_detail" class="btn">
+                    <a href="{% url 'product_detail' SM.id %}" class="btn">
                       <div class="card">
                         <figure>
                           <img src="{{ SM.product_image.url }}" class="card-img-top" alt="">
@@ -82,7 +82,7 @@
                   <div class="row row-cols-1 row-cols-md-3 g-4">
                        {% for birny in Biriyani %}
                     <div class="col">
-                    <a href="/product_detail" class="btn">
+                    <a href="{% url 'product_detail' birny.id %}" class="btn">
                       <div class="card">
                         <figure>
                           <img src="{{ birny.product_image.url }}" class="card-img-top" alt="">
@@ -107,7 +107,7 @@
                   <div class="row row-cols-1 row-cols-md-3 g-4">
                        {% for fd in FreshDessert %}
                     <div class="col">
-                    <a href="/product_detail" class="btn">
+                    <a href="{% url 'product_detail' fd.id %}" class="btn">
                       <div class="card">
                         <figure>
                           <img src="{{ fd.product_image.url }}" class="card-img-top" alt="">
@@ -131,7 +131,7 @@
                   <div class="row row-cols-1 row-cols-md-3 g-4">
                     {% for bev in Beverage %}
                     <div class="col">
-                    <a href="/product_detail" class="btn">
+                    <a href="{% url 'product_detail' bev.id %}" class="btn">
                       <div class="card">
                         <figure>
                           <img src="{{ bev.product_image.url }}" class="card-img-top" alt="">
