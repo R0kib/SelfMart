@@ -76,6 +76,8 @@
           <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
           </li>
+          {% comment %} user authentication {% endcomment %}
+          {% if request.user.is_authenticated %}
           <li class="nav-item dropdown mx-2">
             <a
               class="nav-link dropdown-toggle text-white"
@@ -83,9 +85,8 @@
               id="profileDropdown"
               role="button"
               data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Erfan
+              aria-expanded="false">
+              {{username}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="profileDropdown">
               <li>
@@ -99,9 +100,17 @@
                   >Change Password</a
                 >
               </li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
+              <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'cart-item' %}">
+            <span class="badge badge-danger">2</span><i class="fas fa-shopping-cart"></i
+            ></a>
+          </li>
+          {% else %}
+
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -111,7 +120,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="far fa-user"></i>
+             <i class="far fa-user"></i>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/log_reg/login">Log In</a></li>
@@ -120,14 +129,8 @@
               </li>
             </ul>
           </li>
-          {% comment %}
-          <i class="far fa-user"></i>
-          {% endcomment %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'cart-item' %}"
-              ><i class="fas fa-shopping-cart"></i
-            ></a>
-          </li>
+          {% endif %}
+         
         </ul>
       </div>
     </div>
