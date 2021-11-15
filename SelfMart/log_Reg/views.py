@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 
@@ -37,18 +37,20 @@ def signup(request):
         myuser = User.objects.create_user(username, email, password1)
         myuser.number = number
 
+
+        messages.success(request, "Your Account has been successfully created.")
+
+
         myuser.save()
 
-        messages.success(
-            request, "Your Account has been successfully created.")
-
-        return redirect('login')
+        return redirect('signup')
 
     return render(request, 'log_Reg/signup.html')
 
 
-def logout(request):
-    pass
+def logout_page(request):
+    logout(request)
+    return redirect('home')
 
 
 def profile(request):
