@@ -8,16 +8,17 @@
 {% block main-content %}
      <div class="signup-form">
         <h1>Sign Up</h1>
-        <form action="" method="post">
-        {% if messages %} 
+        <form action="" method="POST">
+       
+        {% csrf_token %}
+         {% if messages %} 
             {% for message in messages %}
-            <p {% if message.success %} class="alert alert-success mb-5" {% endif %}>
+            <p {% if message.success %} class="alert alert-success mb-5" {% else %} class="alert alert-danger mb-5" {% endif %}>
                 {{message}}
             </p>
             
             {% endfor %}
         {% endif %}
-        {% csrf_token %}
             <input type="text" name="username" class="input-box" placeholder="Username">
             <input type="email" name="email" class="input-box" placeholder="Email">
             <input type="number" name="number" class="input-box" placeholder="Contact No">

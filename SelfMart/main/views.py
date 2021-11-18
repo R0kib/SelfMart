@@ -9,6 +9,8 @@ from .models import (Customer, Product, Cart, Catagories, OrederPlace)
 #     return render(request, 'main/home.html')
 class productView(View):
     def get(self, request):
+        catagories = Catagories.objects.all()
+
         BreakFast = Product.objects.filter(catagory = 'BF')
         Lunches = Product.objects.filter(catagory = 'L')
         Sandwich = Product.objects.filter(catagory = 'SM')
@@ -16,9 +18,16 @@ class productView(View):
         FreshDessert = Product.objects.filter(catagory = 'FD')
         Beverage = Product.objects.filter(catagory = 'BG')
 
-        return render(request, 'main/home.html', {'BreakFast': BreakFast ,
-        'Lunches': Lunches, 'Sandwich': Sandwich , 'Biriyani': Biriyani ,
-         'FreshDessert': FreshDessert, 'Beverage': Beverage })
+        catagory_Items ={
+            'BreakFast': BreakFast ,
+            'Lunches': Lunches, 
+            'Sandwich': Sandwich ,
+            'Biriyani': Biriyani ,
+            'FreshDessert': FreshDessert,
+            'Beverage': Beverage 
+            }
+
+        return render(request, 'main/home.html', {'catagory_Items' : catagory_Items, 'catagories': catagories})
 
 
 
