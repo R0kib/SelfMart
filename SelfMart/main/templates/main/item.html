@@ -4,7 +4,7 @@
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Breakfast Platter</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
-                    {% for break_fast in BreakFast %}
+                    {% for break_fast in catagory_Items.BreakFast %}
                     <div class="col">
                     <a href="{% url 'product_detail' break_fast.id %}" class="btn">
                       <div class="card">
@@ -26,11 +26,11 @@
                   </div>
               </section> 
 
-              <section id="New Lunches">
+              <section id="Lunches">
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Lunches</h1>
                 <div class="row row-cols-1 row-cols-md-3 g-4">
-                     {% for lunch in Lunches %}
+                     {% for lunch in catagory_Items.Lunches %}
                     <div class="col">
                     <a href="{% url 'product_detail' lunch.id %}" class="btn">
                       <div class="card">
@@ -55,7 +55,7 @@
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Sandwich and more</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
-                       {% for SM in Sandwich %}
+                       {% for SM in catagory_Items.Sandwich %}
                     <div class="col">
                     <a href="{% url 'product_detail' SM.id %}" class="btn">
                       <div class="card">
@@ -80,7 +80,7 @@
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Biriyani</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
-                       {% for birny in Biriyani %}
+                       {% for birny in catagory_Items.Biriyani %}
                     <div class="col">
                     <a href="{% url 'product_detail' birny.id %}" class="btn">
                       <div class="card">
@@ -105,7 +105,7 @@
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Fresh Dessert</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
-                       {% for fd in FreshDessert %}
+                       {% for fd in catagory_Items.FreshDessert %}
                     <div class="col">
                     <a href="{% url 'product_detail' fd.id %}" class="btn">
                       <div class="card">
@@ -129,7 +129,7 @@
               <div class="new_lunches">
                 <h1 class="new_lunches_title">Beverage</h1>
                   <div class="row row-cols-1 row-cols-md-3 g-4">
-                    {% for bev in Beverage %}
+                    {% for bev in catagory_Items.Beverage %}
                     <div class="col">
                     <a href="{% url 'product_detail' bev.id %}" class="btn">
                       <div class="card">

@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import redirect, render
+from main.models import (Customer, Product, Cart, Catagories, OrederPlace)
 # Create your views here.
 
 
@@ -11,9 +11,14 @@ def items(request):
 
 
 def cartitem(request):
+    user = request.user
+    product_id = request.GET.get('prod_id')
+    product = Product.objects.get(id = product_id)
+    Cart(user=user, product=product).save()
+    return redirect('showcart')
 
-    return render(request, 'items/cart_item.html')
-
+def show_cart(request):
+    pass
 
 def checkout(request):
     return render(request, 'items/checkout.html')

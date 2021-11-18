@@ -1,6 +1,7 @@
 
 {% extends "main/base.html" %} 
 {% load static %}
+
 {% block main-content %}
  <section class="slider"> 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -47,19 +48,20 @@
         </div>
         <div class="row">
             <div class="col-4 sidebar">
-                <a class=" nav-link " href="#Breakfast Platter">Breakfast Platter</a>
-                <a class=" nav-link " href="#New Lunches"> Lunches</a>
-                <a class=" nav-link " href="#Sandwich and more">Sandwich and more</a>
-                <a class=" nav-link " href="#Biriyani">Biriyani</a>
-                <a class=" nav-link " href="#Fresh Dessert">Fresh Dessert</a>
-                <a class=" nav-link " href="#Beverage">Beverage</a>
+                
+                {% if catagories %}
+                {% for catagory in catagories %}
+                  <a class=" nav-link " href="#{{catagory.Items_name}}">{{ catagory.Items_name }}</a>                
+                {% endfor %}
+                {% endif %}
+                
             </div>
             <div class="col-8 new_item">
                 {% include 'main/item.html' %}
             </div>
         </div> 
     </div>
-    </section>
+  </section>
 
 {% endblock main-content %}
   {% block main-footer %}
