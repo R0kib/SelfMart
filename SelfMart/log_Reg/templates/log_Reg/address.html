@@ -18,16 +18,16 @@
     </div>
     <div class="col-sm-9 offset-sm-1">
       <div class="row">
-      {% for ad in add %}
+      {% for user in add %}
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
-              <h3>Address {{ forloop.current }} </h3>
-              <p>Name: {{ad.name}}</p>
-              <p>Area: {{ad.Area}}</p>
-              <p>City: {{ad.city}}</p>
-              <p>ZipCode: {{ad.zipCode}}</p>
-              <p>Divison: {{ad.divison}}</p>
+              <h3>Address {{ forloop.count }} </h3>
+              <p>Name: {{user.name}}</p>
+              <p>Area: {{user.Area}}</p>
+              <p>City: {{user.city}}</p>
+              <p>ZipCode: {{user.zipCode}}</p>
+              <p>Divison: {{user.divison}}</p>
             </div>
           </div>
         </div>
