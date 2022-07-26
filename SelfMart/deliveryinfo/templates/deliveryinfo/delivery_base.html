@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SeflMart|{% block title %}{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'deliveryinfo/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'deliveryinfo/css/bootstrap_min.css' %}">
+    
+    {% block cssblock %}
+     <link rel="stylesheet" href="{% static 'deliveryinfo/css/style.css' %}">
+    {% endblock cssblock %}
+
+    <link rel="stylesheet" href="{% static 'deliveryinfo/css/main.css' %}">
+    
+</head>
+<body>
+  <div class="row">
+    <div class="col-2">
+      {% include 'deliveryinfo/sidenav.html' %}
+    </div>
+    <div class="col-10">
+      {% block DeliveryMan_content %}
+        
+      {% endblock DeliveryMan_content %}
+    </div>
+  </div>
+   
+    <footer class="footer ">
+       <div class="bg-black">
+           <div class="container-fluid bg-black d-md-flex align-items-center justify-content-center text-center">
+            <small class="text-white">Copyright &copy; 2021 || Developed By Lollypop Troops </small>
+           </div>
+        </div>  
+     </footer>
+   
+   
+   
+    <script src="{% static 'deliveryinfo/js/bootstrap_min.js' %} "></script>
+    <script src="{% static 'deliveryinfo/js/jquery_min.js' %} "></script>
+    <script src="{% static 'deliveryinfo/js/popper_min.js' %} "></script>
+    <script src="{% static 'deliveryinfo/js/all.min.js'%} "></script>
+</body>
+</html>

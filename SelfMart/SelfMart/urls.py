@@ -11,4 +11,5 @@ urlpatterns = [
     path('product_detail/<int:pk>', views.viewProductDetails.as_view(), name="product_detail"),
     path('item/', include('items.urls')),           
     path('log_reg/', include('log_Reg.urls')),
+    path('delivery/', include('deliveryinfo.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

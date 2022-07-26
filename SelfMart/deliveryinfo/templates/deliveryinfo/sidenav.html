@@ -1,0 +1,18 @@
+{% load static %} {% block cssblock %}
+<link rel="stylesheet" href="{% static 'deliveryinfo/css/sidenav.css' %}" />
+{% endblock cssblock %} 
+
+<nav class="menu" tabindex="0">
+  <div class="smartphone-menu-trigger"></div>
+  <header class="avatar">
+    <img src="{% static 'deliveryinfo/images/profile.webp' %}" />
+    <h2>John D.</h2>
+  </header>
+  <ul>
+    <li class="icon-dashboard"><a href="{% url 'delivery_home' %} ">Dashboard</a> </li>
+    <li class="icon-customers"><a href="#">Orders</a> </li>
+    {% comment %} <li class="icon-users"><a href="#">Users</a> <li> {% endcomment %}
+    <li class="icon-settings"><a href="#">Settings</a></li>
+    <li class="icon-settings"><a href="#">Logout</a></li>
+  </ul>
+</nav>

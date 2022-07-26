@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'main',
     'items',
     'log_Reg',
+    'deliveryinfo'
 ]
 
 MIDDLEWARE = [
