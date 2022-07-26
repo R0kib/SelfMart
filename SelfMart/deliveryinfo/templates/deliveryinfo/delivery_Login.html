@@ -1,0 +1,52 @@
+{% extends 'deliveryinfo/log_reg_content.html' %}
+{% load static %}
+{% block cssblock %}
+<link rel="stylesheet" href="{% static 'deliveryinfo/css/login.css' %}">
+{% endblock cssblock %}
+
+{% block log_reg_content %}
+    
+   
+    <nav>
+        <div>Delivery Login</div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="img">
+                    <img src="{% static 'deliveryinfo/images/deliveryMan.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="login_form">
+                    <form action="" method="post">
+        
+
+                        {% csrf_token  %}
+                        {% if messages %} 
+                            {% for message in messages %}
+                            <p {% if message.tags %} class="alert alert-danger mb-5" role="alert"{% endif %}>
+                                {{message}}
+                            </p>
+                            
+                            {% endfor %}
+                        {% endif %}
+                            <input type="text" name="username" class="input-box" placeholder="Username">
+                            <input type="password" name="password1" class="input-box" placeholder="Password">
+                            
+                             <a class="forget_pass" href="#">Forget Password?</a> <br>
+                            <button type="submit" class="btn btn-success mt-3">Log In</button>
+                            
+                           
+                            <hr>
+                            <p class="or">OR</p>
+                            <p class="another_account">Don't have an account? <a type="button" class="text-danger" href="{% url 'delivery_signup' %}">Sign Up</a></p>
+                            
+                        </form>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+    {% endblock log_reg_content %}
